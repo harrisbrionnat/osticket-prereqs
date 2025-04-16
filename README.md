@@ -42,7 +42,11 @@ First, enable IIS (Internet Information Services) by going to the Control Panel.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, install the PHP Manager, the Rewrite Module, which is listed in the prerequisites. Create a directory on your computer's C drive.
+This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder.
+Then, install the C_redist.x86.exe  and the mysql-5.5.62-win32.msi files. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose standard configuration on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo)
+
+
 </p>
 <br />
 
