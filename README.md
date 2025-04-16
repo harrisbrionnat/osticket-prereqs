@@ -76,3 +76,25 @@ Now, we are ready to install osTicket. Unzip the osticket zip folder. Copy the '
 Next we need to rename the ost-config php file from C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. We can now assign permissions on this file which will allow osTicket to make changes to this file. Right-Click on the file, go to Properties--> Security--> Advanced. Click disable inheritance and click 'remove all inherited permissions'. Click Add--> Select a Principal. In the box where you can ente an object name, type 'everyone' (Not best practice for the real-world, but okay for this demo). For Basic Permissions, check: full control. Click 'apply' and 'ok'.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+We will continue with the osTicket installation within our browser. Click 'Continue' and provide a help desk name and default email. Then set up your primary administrator account credentials. 
+</p>
+<br />
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+  Now, we will install HeidiSQL. After installing, you will see the Heidi SQL installation manager. Click 'new'. Make sure your user and password are both set to root. Then click 'open'. The database is now unnamed. Right click on 'unnamed' and click 'create new'--> 'database'. The database will be called 'osTicket'.
+</p>
+<br />
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+  Back to te browser, continue with the osTicket installation. Under 'Database Settings' type osTicket as the Database, and root as bothe the username and password. Then install. You are now ready to use osTicket!
+</p>
+<br />
