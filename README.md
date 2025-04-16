@@ -68,3 +68,11 @@ Now, go back to IIS  and register PHP within IIS. Go to the Start menu and open 
 Now, we are ready to install osTicket. Unzip the osticket zip folder. Copy the 'upload' folder into this path: c:\inetpub\wwwroot. Rename the folder within the path to 'osTicket'. Restart the server again. From within the IIS Manager, go to sites--> Default Web Site--> and click on osTicket. On the right panel click on Browse 80. In the IIS Manager we must enable some dependencies, these include: php_imap.dll, php_intl.dll, and php_opcache.dll. We do this by going to Sites-->Default Web Site--> osTicket---> and clicking on PHP Manager. The disabled extensions are gray. Enable them by right clicking on them and clicking enable.
 </p>
 <br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next we need to rename the ost-config php file from C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. We can now assign permissions on this file which will allow osTicket to make changes to this file. Right-Click on the file, go to Properties--> Security--> Advanced. Click disable inheritance and click 'remove all inherited permissions'. Click Add--> Select a Principal. In the box where you can ente an object name, type 'everyone' (Not best practice for the real-world, but okay for this demo). For Basic Permissions, check: full control. Click 'apply' and 'ok'.
+</p>
+<br />
