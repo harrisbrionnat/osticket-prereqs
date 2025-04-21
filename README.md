@@ -54,10 +54,10 @@ This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP Manager zip f
 </p>
 <br />
 <p>
-3. Install the MySQL database. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  'typical configuration' on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo.
+3. Install the MySQL database. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  'typical configuration' on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo).
 </p>
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/yyhHq2h.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Now, go back to IIS  and register PHP within IIS. Go to the Start menu and open IIS by right-clicking and running as an administrator. Open the PHP Manager, click 'register a new PHP version and browse to the PHP executable housed in the C: drive. After clicking 'ok', stop and restart the web server by clicking the osticket vm and then clicking stop. Click it again click start.
