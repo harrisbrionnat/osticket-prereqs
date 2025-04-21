@@ -20,13 +20,15 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Windows 10</b> (21H2)
 
-<h2>List of Prerequisites</h2>
+<h2>List of Prerequisites (Best to Download prior to performing steps below</h2>
 
 - 
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- MySQL Database
+- HeidiSQL
+- osTicket installer
+- PHP Manager for IIS
+- Microsoft Visual C++ Redistributable
+- URL Rewrite Module
 
 <h2>Installation Steps</h2>
 
