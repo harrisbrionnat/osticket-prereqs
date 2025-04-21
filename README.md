@@ -45,7 +45,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <p>
 2. Install the PHP Manager and the Rewrite Module. Create a directory on your computer's C drive.
-This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder. Then, install Microsoft Visual C++ Redistributable. 
+This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP Manager zip folder into the “C:\PHP” folder. Then, install Microsoft Visual C++ Redistributable. 
 
 
 </p>
@@ -54,7 +54,7 @@ This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP 7.3.8 (php-7.
 </p>
 <br />
 <p>
-3. Install the MySQL database. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  'typical configuration' on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo
+3. Install the MySQL database. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  'typical configuration' on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo.
 </p>
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
