@@ -36,12 +36,11 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <p>
     First, enable IIS (Internet Information Services) by going to --> <b>Control Panel</b> -->  <b>Programs and Features</b> --> click <b>uninstall a program</b>. To the left of the window, click on <b>Turn windows features on or off</b>. Check the box for <b>Internet Information Services</b> and then expand it. Expand <b>World Wide Web Services</b> then expand it. Expand <b>Application Development Features</b> then check CGI. This will install the web server.
-</p>
 
-    <img src="https://imgur.com/xJNztgn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 <br/>
-
+<p>
+<img src="https://imgur.com/xJNztgn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
 
 <p>
