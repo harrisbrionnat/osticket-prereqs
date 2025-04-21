@@ -68,7 +68,7 @@ Now, go back to IIS  and register PHP within IIS. Go to the Start menu and open 
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/skyrpuZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Now, we are ready to install osTicket. Unzip the osticket zip folder. Copy the 'upload' folder into this path: c:\inetpub\wwwroot. Rename the folder within the path to 'osTicket'. Restart the server again. From within the IIS Manager, go to sites--> Default Web Site--> and click on osTicket. On the right panel click on Browse 80. In the IIS Manager we must enable some dependencies, these include: php_imap.dll, php_intl.dll, and php_opcache.dll. We do this by going to Sites-->Default Web Site--> osTicket---> and clicking on PHP Manager. The disabled extensions are gray. Enable them by right clicking on them and clicking enable.
