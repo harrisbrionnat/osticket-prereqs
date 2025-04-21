@@ -35,7 +35,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 
 <p>
-    First, enable IIS (Internet Information Services) by going to --> <b>Control Panel</b> -->  <b>Programs and Features</b> --> click <b>uninstall a program</b>. To the left of the window, click on <b>Turn windows features on or off</b>. Check the box for <b>Internet Information Services</b> and then expand it. Expand <b>World Wide Web Services</b> then expand it. Expand <b>Application Development Features</b> then check CGI. This will install the web server.
+1. Enable IIS (Internet Information Services) by going to --> <b>Control Panel</b> -->  <b>Programs and Features</b> --> click <b>uninstall a program</b>. To the left of the window, click on <b>Turn windows features on or off</b>. Check the box for <b>Internet Information Services</b> and then expand it. Expand <b>World Wide Web Services</b> then expand it. Expand <b>Application Development Features</b> then check CGI. This will install the web server.
 
 <br/>
 <p>
@@ -44,9 +44,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 
 <p>
-Next, install the PHP Manager and the Rewrite Module. Create a directory on your computer's C drive.
-This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder.
-Then, install the C_redist.x86.exe  and the mysql-5.5.62-win32.msi files. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  typical configuration on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo)
+2. Install the PHP Manager and the Rewrite Module. Create a directory on your computer's C drive.
+This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder. Then, install Microsoft Visual C++ Redistributable. 
 
 
 </p>
@@ -54,7 +53,9 @@ Then, install the C_redist.x86.exe  and the mysql-5.5.62-win32.msi files. When i
 <img src="https://imgur.com/gKtChVi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
-
+<p>
+3. Install the MySQL database. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  'typical configuration' on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo
+</p>
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
