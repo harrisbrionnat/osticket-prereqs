@@ -24,6 +24,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 
 - MySQL Database
+- PHP installer
 - HeidiSQL
 - osTicket installer
 - PHP Manager for IIS
@@ -48,7 +49,7 @@ p>
 <p>
 Next, install the PHP Manager and the Rewrite Module. Create a directory on your computer's C drive.
 This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder.
-Then, install the C_redist.x86.exe  and the mysql-5.5.62-win32.msi files. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose standard configuration on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo)
+Then, install the C_redist.x86.exe  and the mysql-5.5.62-win32.msi files. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  typical configuration on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo)
 
 
 </p>
