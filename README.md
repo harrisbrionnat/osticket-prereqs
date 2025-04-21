@@ -20,9 +20,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Windows 10</b> (21H2)
 
-<h2>List of Prerequisites (Best to Download prior to performing steps below</h2>
+<h2>List of Prerequisites (Best to download prior to performing steps below)</h2>
 
-- 
+
 - MySQL Database
 - HeidiSQL
 - osTicket installer
