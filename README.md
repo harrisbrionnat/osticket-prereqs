@@ -1,24 +1,20 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+    <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+# osTicket - Prerequisites and Installation
+This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.
 
-
-<h2>Environments and Technologies Used</h2>
-
+## Environments and Technologies Used
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Internet Information Services (IIS)
 
-<h2>Operating Systems Used </h2>
+## Operating Systems Used 
+- Windows 10 (21H2)
 
-- Windows 10</b> (21H2)
-
-<h2>List of Prerequisites (Best to download prior to performing steps below)</h2>
-
-
+## List of Prerequisites 
+*(Best to download prior to performing the steps below)*
 - MySQL Database
 - PHP installer
 - HeidiSQL
@@ -27,82 +23,73 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Microsoft Visual C++ Redistributable
 - URL Rewrite Module
 
-<h2>Installation Steps</h2>
+## Installation Steps
 
+1. **Enable IIS (Internet Information Services)**:
+   - Go to **Control Panel** → **Programs and Features** → Click **Uninstall a program**.
+   - On the left, click **Turn Windows features on or off**.
+   - Check the box for **Internet Information Services** and expand it. 
+     - Expand **World Wide Web Services** → **Application Development Features**, and check **CGI**.
+   
+   ![Enable IIS](https://imgur.com/xJNztgn.png)
 
-<p>
-1. Enable IIS (Internet Information Services) by going to --> <b>Control Panel</b> -->  <b>Programs and Features</b> --> click <b>uninstall a program</b>. To the left of the window, click on <b>Turn windows features on or off</b>. Check the box for <b>Internet Information Services</b> and then expand it. Expand <b>World Wide Web Services</b> then expand it. Expand <b>Application Development Features</b> then check CGI. This will install the web server.
+2. **Install PHP Manager and the Rewrite Module**:
+   - Create a directory: `C:\PHP`.
+   - Unzip the PHP Manager into the `C:\PHP` folder.
+   - Install Microsoft Visual C++ Redistributable.
+   
+   ![PHP Manager Installation](https://imgur.com/gKtChVi.png)
 
-<br/>
-<p>
-<img src="https://imgur.com/xJNztgn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+3. **Install MySQL Database**:
+   - Choose 'Typical' for the setup type during installation.
+   - Ensure to check the box to launch the MySQL configuration wizard, and select 'Typical Configuration'.
+   - When prompted for security options, type 'root' for the password (not best practice for real-world use, but simplified for this demo).
+   
+   ![MySQL Installation](https://imgur.com/yyhHq2h.png)
 
+4. **Register PHP within IIS**:
+   - Open IIS by right-clicking the Start menu and selecting **Run as Administrator**.
+   - Open the PHP Manager, click **Register a new PHP version** and browse to the PHP executable in the C: drive.
+   - After clicking **OK**, stop and restart the web server via the IIS Manager.
 
-<p>
-2. Install the PHP Manager and the Rewrite Module. Create a directory on your computer's C drive.
-This is the path: C:\PHP. Name that directory PHP. Next, unzip PHP Manager zip folder into the “C:\PHP” folder. Then, install Microsoft Visual C++ Redistributable. 
+   ![Register PHP](https://imgur.com/skyrpuZ.png)
 
+5. **Install osTicket**:
+   - Unzip the osTicket zip folder and copy the 'upload' folder to `C:\inetpub\wwwroot`.
+   - Rename the copied folder to 'osTicket'.
+   - Restart the server. In IIS Manager, navigate to **Sites** → **Default Web Site** → click on 'osTicket' → Click on **Browse 80**.
+   - Enable the required PHP extensions: `php_imap.dll`, `php_intl.dll`, and `php_opcache.dll` by going to **Sites** → **Default Web Site** → **osTicket** → click on **PHP Manager**.
 
-</p>
-<p>
-<img src="https://imgur.com/gKtChVi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
-<p>
-3. Install the MySQL database. When installing MySQL, choose 'Typical' for the setup type. Make sure the box is checked to launch the MySQL configuration wizard an choose  'typical configuration' on that window. When the window to modify security option appears type 'root' for the password. (This is not best practice in the real world, it just makes it easier for this demo).
-</p>
-<p>
-<img src="https://imgur.com/yyhHq2h.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Now, go back to IIS  and register PHP within IIS. Go to the Start menu and open IIS by right-clicking and running as an administrator. Open the PHP Manager, click 'register a new PHP version and browse to the PHP executable housed in the C: drive. After clicking 'ok', stop and restart the web server by clicking the osticket vm and then clicking stop. Click it again click start.
-</p>
-<br />
+   ![osTicket Install](https://imgur.com/QuQvAx0.png)
 
-</p>
-<br />
+6. **Configure osTicket**:
+   - Rename `ost-sampleconfig.php` to `ost-config.php` in `C:\inetpub\wwwroot\osTicket\include`.
+   - Set permissions on this file:
+     - Right-click the file → **Properties** → **Security** → **Advanced** → **Disable inheritance**, and remove all inherited permissions.
+     - Click **Add** → **Select a Principal**. Type `Everyone` and set **Full Control** permissions.
 
-<p>
-<img src="https://imgur.com/skyrpuZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Now, we are ready to install osTicket. Unzip the osticket zip folder. Copy the 'upload' folder into this path: c:\inetpub\wwwroot. Rename the folder within the path to 'osTicket'. Restart the server again. From within the IIS Manager, go to sites--> Default Web Site--> and click on osTicket. On the right panel click on Browse 80. In the IIS Manager we must enable some dependencies, these include: php_imap.dll, php_intl.dll, and php_opcache.dll. We do this by going to Sites-->Default Web Site--> osTicket---> and clicking on PHP Manager. The disabled extensions are gray. Enable them by right clicking on them and clicking enable.
-</p>
-<br />
+   ![Set Permissions](https://imgur.com/hqDOf2w.png)
+   ![Permissions Window](https://imgur.com/u2G4nbQ.png)
 
-<p>
-<img src="https://imgur.com/QuQvAx0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Next we need to rename the ost-config php file from C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. We can now assign permissions on this file which will allow osTicket to make changes to this file. Right-Click on the file, go to Properties--> Security--> Advanced. Click disable inheritance and click 'remove all inherited permissions'. Click Add--> Select a Principal. In the box where you can ente an object name, type 'everyone' (Not best practice for the real-world, but okay for this demo). For Basic Permissions, check: full control. Click 'apply' and 'ok'.
-</p>
-<br />
+7. **Complete osTicket Installation**:
+   - In your browser, click **Continue** and provide a help desk name and default email. Set up your primary administrator account credentials.
 
-<p>
-<img src="https://imgur.com/hqDOf2w.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-<img src="https://imgur.com/u2G4nbQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-We will continue with the osTicket installation within our browser. Click 'Continue' and provide a help desk name and default email. Then set up your primary administrator account credentials. 
-</p>
-<br />
-<p>
-<img src="https://imgur.com/xo5ksCT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-  Now, we will install HeidiSQL. After installing, you will see the Heidi SQL installation manager. Click 'new'. Make sure your user and password are both set to root. Then click 'open'. The database is unnamed. Right click on 'unnamed' and click 'create new'--> 'database'. The database will be called 'osTicket'.
-</p>
-<br />
-<p>
-<img src="https://imgur.com/xo5ksCT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-  Back to te browser, continue with the osTicket installation. Under 'Database Settings' type osTicket as the Database, and root as both the username and password. Then install. You are now ready to use osTicket!
-</p>
-<p>
-<img src="https://imgur.com/fdc6NGZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
+   ![osTicket Setup](https://imgur.com/xo5ksCT.png)
+
+8. **Installing HeidiSQL**:
+   - After installation, launch HeidiSQL and click **New**.
+   - Set both user and password to `root`, and then click **Open**.
+   - Right-click on 'Unnamed' and select **Create New** → **Database**. The database name will be `osTicket`.
+
+   ![HeidiSQL Database Setup](https://imgur.com/xo5ksCT.png)
+
+9. **Finalizing osTicket Installation**:
+  - Return to your browser to continue with the osTicket installation.
+  - Under **Database Settings**, enter the following:
+  - **Database**: osTicket
+  - **Username**: root
+  - **Password**: root
+
+- Click **Install**. You are now ready to use osTicket!
+
+![Final Step of Installation](https://imgur.com/fdc6NGZ.png)
