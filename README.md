@@ -76,7 +76,7 @@ Now, we are ready to install osTicket. Unzip the osticket zip folder. Copy the '
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/QuQvAx0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Next we need to rename the ost-config php file from C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. We can now assign permissions on this file which will allow osTicket to make changes to this file. Right-Click on the file, go to Properties--> Security--> Advanced. Click disable inheritance and click 'remove all inherited permissions'. Click Add--> Select a Principal. In the box where you can ente an object name, type 'everyone' (Not best practice for the real-world, but okay for this demo). For Basic Permissions, check: full control. Click 'apply' and 'ok'.
