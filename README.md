@@ -29,7 +29,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
    - Go to **Control Panel** → **Programs and Features** → Click **Uninstall a program**.
    - On the left, click **Turn Windows features on or off**.
    - Check the box for **Internet Information Services** and expand it. 
-     - Expand **World Wide Web Services** → **Application Development Features**, and check **CGI**.
+     - Expand **World Wide Web Services** → Expand **Application Development Features**, and check **CGI**.
    
    ![Enable IIS](https://imgur.com/xJNztgn.png)
 
@@ -57,8 +57,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 5. **Install osTicket**:
    - Unzip the osTicket zip folder and copy the 'upload' folder to `C:\inetpub\wwwroot`.
    - Rename the copied folder to 'osTicket'.
-   - Restart the server. In IIS Manager, navigate to **Sites** → **Default Web Site** → click on 'osTicket' → Click on **Browse 80**.
-   - Enable the required PHP extensions: `php_imap.dll`, `php_intl.dll`, and `php_opcache.dll` by going to **Sites** → **Default Web Site** → **osTicket** → click on **PHP Manager**.
+   - Restart the server. In IIS Manager, navigate to **Sites** → **Default Web Site** → click on 'osTicket' → Click on **Browse 80** on th right.
+   - Enable the required PHP extensions: `php_imap.dll`, `php_intl.dll`, and `php_opcache.dll` by going to **Sites** → **Default Web Site** → **osTicket** → click on **PHP Manager**. The disabled extensions are grayed out. Enable them by right clicking on them and clicking enable.
 
    ![osTicket Install](https://imgur.com/QuQvAx0.png)
 
